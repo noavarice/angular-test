@@ -1,4 +1,4 @@
 const app = angular.module('app');
-app.controller('TestController', ['$scope', function($scope) {
+app.controller('TestCtrl', ['$scope', function($scope) {
   $scope.text = 'Hello!';
 }]);
