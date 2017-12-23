@@ -7,6 +7,7 @@ app.config([
   '$urlRouterProvider',
   '$stateProvider',
   function($locationProvider, $urlRouterProvider, $stateProvider) {
+    $locationProvider.hashPrefix('');
     $urlRouterProvider.otherwise("/main");
     $stateProvider
     .state('main', {
