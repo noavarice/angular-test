@@ -1,6 +1,3 @@
-import angular from 'angular';
-import uirouter from 'angular-ui-router';
-
 const app = angular.module('app', [uirouter]);
 app.config([
   '$locationProvider',
