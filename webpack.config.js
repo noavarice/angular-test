@@ -9,7 +9,7 @@ module.exports = {
     app: './index.js',
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'build')
   },
   devtool: 'inline-source-map',
