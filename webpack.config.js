@@ -20,7 +20,9 @@ module.exports = {
     new UglifyJsPlugin(),
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      title: 'Output Management',
+      template: 'my-index.html',
+      inject: 'head'
     }),
   ],
   resolve: {
