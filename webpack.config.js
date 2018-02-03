@@ -21,7 +21,7 @@ module.exports = {
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
       title: 'Output Management',
-      template: 'my-index.html',
+      template: 'index.html',
       inject: 'head'
     }),
   ],
