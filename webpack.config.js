@@ -1,13 +1,15 @@
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    vendor: './vendor.js',
+    vendor: './_vendor.js',
     app: './index.js',
   },
   output: {
-    filename: '[hash].[name].js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'build')
   },
   devtool: 'inline-source-map',
@@ -16,6 +18,10 @@ module.exports = {
   },
   plugins: [
     new UglifyJsPlugin(),
+    new CleanWebpackPlugin(['build']),
+    new HtmlWebpackPlugin({
+      title: 'Output Management'
+    }),
   ],
   resolve: {
     modules: [
