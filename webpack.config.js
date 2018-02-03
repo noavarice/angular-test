@@ -5,8 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    _vendor: './vendor.js',
-    app: './index.js',
+    vendor: './vendor.js',
+    app: './app.js',
   },
   output: {
     filename: '[name].[chunkhash].js',
